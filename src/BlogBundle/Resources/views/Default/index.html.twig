@@ -1,0 +1,38 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <main class="container-fluid">
+        <div class="container pt-5">
+            <button class="btn-info btn" data-toggle="modal" data-target="#newEvent">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+
+            <ul class="list-group pt-5">
+                <li class="list-group-item">First event</li>
+                <li class="list-group-item">Second event</li>
+                <li class="list-group-item">Third event</li>
+            </ul>
+            <!--start modal-->
+            <div class="modal fade" id="newEvent">
+                <div class="modal-dialog mb-0">
+                    <div class="modal-content">
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <h5 class="modal-title text-muted text-center mb-4">Add Event Now</h5>
+                            <div class="form-group">
+                                <input value="" id="value" type="text" placeholder="Type here the event name" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" id="create" class="btn btn-info">Create</button>
+                            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--end modal-->
+        </div>
+    </main>
+{% endblock %}
